@@ -1,0 +1,18 @@
+.form_container {
+  margin: 50px 48px !important;
+
+  &__title {
+    color: $h3-color !important;
+    margin-top: 0px !important;
+    font-size: 32px !important;
+    margin-bottom: 24px !important;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 16px !important;
+  }
+}
+
+.steps {
+  margin-bottom: 24px;
+}

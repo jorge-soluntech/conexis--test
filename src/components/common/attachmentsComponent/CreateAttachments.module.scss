@@ -1,0 +1,91 @@
+@import '@/styles/mediaQueries';
+
+.form_create {
+  position: relative;
+  font-size: 16px;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1.6px;
+  display: grid;
+
+  @include tablet() {
+    min-height: 100%;
+    margin-top: 0;
+  }
+
+  @include mobile() {
+    background-color: white;
+    min-height: auto;
+    margin-top: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: 0;
+    display: block;
+    padding: 0;
+  }
+
+  & > div > h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -3.2px;
+    color: $h3-color;
+    min-width: max-content;
+
+    @include mobile() {
+      line-height: 32px;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.form_subtitle_container {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+
+.form_small_title {
+  font-size: 16px;
+  color: $h3-color;
+
+  span {
+    color: $paragraph-color;
+  }
+}
+
+.add_attachment {
+  margin: 24px 0;
+  font-size: 16px;
+  color: $green-60;
+  font-weight: 400;
+  width: max-content;
+  font-style: normal;
+  line-height: 120%;
+
+  span img {
+    padding-right: 15px !important;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.continue_button {
+  display: flex;
+  margin-top: 24px;
+  justify-content: space-between;
+
+  @include mobile() {
+    button {
+      width: 50%;
+    }
+
+    button:first-child {
+      margin-right: 8px;
+    }
+  }
+}

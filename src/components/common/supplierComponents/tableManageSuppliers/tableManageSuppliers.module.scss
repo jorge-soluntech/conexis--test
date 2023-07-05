@@ -1,0 +1,66 @@
+@import '@/styles/mediaQueries';
+
+.headerTable {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $h5-color;
+}
+
+.columnTable {
+  height: 20px;
+  max-width: 200px;
+  line-height: 20px;
+  padding: 12px !important;
+  color: $h3-color !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid $border-color !important;
+}
+
+.childrenExpanded {
+  background-color: $bg-expanded !important;
+}
+
+.contractedRowIcon {
+  color: $h5-color;
+  display: inline-flex;
+  background-image: url(/assets/icons/arrow_contract.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+  z-index: 10;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+}
+
+.expandedRowIcon {
+  color: $h5-color;
+  display: inline-flex;
+  background-image: url(/assets/icons/arrow_expand.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+  z-index: 10;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+}
+
+.supplier_status {
+  font-size: 10px;
+  white-space: normal !important;
+  min-width: 9.5rem;
+  line-height: 16px;
+}
+
+.userStatus {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $h3-color;
+}

@@ -1,0 +1,103 @@
+@import '@/styles/mediaQueries';
+
+.main_container {
+  margin: 50px 52px;
+  overflow-x: hidden;
+
+  &__buyer {
+    line-height: 28px;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 !important;
+    font-size: 20px !important;
+    color: $paragraph-color !important;
+  }
+
+  &__title {
+    margin: 0 0 21px !important;
+  }
+  :global .ant-table-column-has-sorters {
+    //Job Id Column
+    &:nth-child(3) {
+      width: 113px;
+      max-width: 113px;
+      padding-left: 0px !important;
+    }
+  }
+
+  :global .ant-table-row td {
+    //Job Id Column
+    &:nth-child(3) {
+      width: 113px;
+      max-width: 113px;
+      padding-left: 0px !important;
+    }
+
+    &:nth-child(5) {
+      width: 148px;
+      max-width: 148px;
+    }
+
+    &:nth-child(7) {
+      width: 119px;
+      max-width: 119px;
+    }
+
+    &:nth-child(8) {
+      width: 114px;
+      max-width: 114px;
+    }
+  }
+
+  @include tablet() {
+    margin: 50px 36px;
+  }
+
+  @include mobile() {
+    margin: 50px 16px;
+  }
+}
+
+.top_bar {
+  width: 100%;
+  display: flex;
+  margin-bottom: 22px;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @include mobile() {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.search {
+  @include tablet() {
+    width: 35%;
+  }
+
+  @include mobile() {
+    width: 100%;
+
+    & input {
+      width: 100% !important;
+    }
+  }
+}
+
+.export {
+  display: flex;
+  gap: 1rem;
+
+  @include mobile() {
+    width: 100%;
+    margin-bottom: 9px;
+    flex-direction: column-reverse;
+
+    & button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

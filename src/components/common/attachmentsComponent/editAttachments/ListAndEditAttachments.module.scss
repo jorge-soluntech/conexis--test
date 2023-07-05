@@ -1,0 +1,160 @@
+@import '@/styles/mediaQueries';
+
+.card {
+  @include mobile() {
+    padding: 0;
+  }
+}
+
+.table_wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 600px;
+  :global .ant-pagination-item-active,
+  :global .ant-pagination-item-active a,
+  :global .ant-pagination-item-active:hover,
+  :global .ant-pagination-item-active a:hover {
+    color: $green-60 !important;
+    border-color: $green-60 !important;
+  }
+
+  :global .anticon {
+    color: $secondary !important;
+  }
+
+  :global .anticon-star {
+    color: inherit !important;
+  }
+
+  :global .anticon-double-left,
+  :global .anticon-double-right,
+  :global .ant-table-column-sorter-inner .active {
+    color: $green-50 !important;
+  }
+  :global .ant-table-row-expand-icon-cell {
+    background-color: transparent !important;
+    border-bottom: 1px solid $border-color !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  :global .ant-spin-container {
+    padding-bottom: 8px;
+  }
+}
+
+.headerTable {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #888e95;
+}
+
+.columnTable {
+  height: 20px;
+  max-width: 200px;
+  width: max-content;
+  line-height: 20px;
+  padding: 12px !important;
+  color: $h3-color !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid $border-color !important;
+
+  .attachment {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span img {
+      padding-right: 10px !important;
+    }
+
+    p {
+      font-size: 14px;
+      color: $h3-color;
+      font-weight: 600;
+      overflow: hidden;
+      line-height: 20px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+  }
+}
+
+.on_back {
+  width: max-content;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $h5-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form_subtitle_container {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+
+.form_small_title {
+  font-size: 16px;
+  color: $h3-color;
+}
+
+.column_paragraph {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6b7279;
+}
+
+.add_attachment {
+  margin: 32px 0;
+  font-size: 16px;
+  color: $green-60;
+  font-weight: 400;
+  width: max-content;
+  font-style: normal;
+  line-height: 120%;
+
+  span img {
+    padding-right: 15px !important;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.buttons {
+  display: flex;
+  margin-top: 32px;
+  justify-content: space-between;
+
+  @include mobile() {
+    button {
+      width: 50%;
+    }
+
+    button:first-child {
+      margin-right: 8px;
+    }
+  }
+}
+
+.back_add_attachment {
+  display: flex;
+  margin-top: 32px;
+  justify-content: flex-end;
+}

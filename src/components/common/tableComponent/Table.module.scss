@@ -1,0 +1,146 @@
+.card {
+  padding: 0;
+
+  :global .anticon {
+    color: $h5-color !important;
+  }
+
+  :global .ant-card-body {
+    @media (max-width: $tablet-breakpoint) {
+      padding: 32px 30px !important;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 20px 10px !important;
+    }
+  }
+}
+
+.grid {
+  width: 100% !important;
+  overflow-x: auto !important;
+  text-align: center !important;
+  box-shadow: none !important;
+  padding: 0 0 12px !important;
+  box-sizing: border-box !important;
+}
+
+.min_width {
+  min-width: 693px;
+}
+
+.userTable {
+  @extend .min_width;
+  :global .ant-pagination {
+    display: flex;
+    align-items: center;
+  }
+
+  :global .ant-table-pagination {
+    padding: 2px;
+  }
+
+  :global .ant-pagination-options .ant-select .ant-select-selector {
+    padding: 0 12px;
+    & span {
+      color: $h5-color;
+    }
+
+    & .ant-select-selection-item {
+      padding: 0 30px 3px 0;
+    }
+  }
+
+  :global .ant-pagination-item-active,
+  :global .ant-pagination-item-active a,
+  :global .ant-pagination-item-active:hover,
+  :global .ant-pagination-item-active a:hover {
+    color: $green-60 !important;
+    border-color: $green-60 !important;
+  }
+
+  :global .anticon {
+    color: $secondary !important;
+  }
+
+  :global .anticon-star {
+    color: inherit !important;
+  }
+
+  :global .anticon-double-left,
+  :global .anticon-double-right,
+  :global .ant-table-column-sorter-inner .active {
+    color: $green-50 !important;
+  }
+  :global .ant-table-row-expand-icon-cell,
+  :global .ant-table-selection-column {
+    background-color: transparent !important;
+    border-bottom: 1px solid $border-color !important;
+    border-radius: 0 !important;
+  }
+  :global .ant-table-cell-row-hover {
+    border-start-start-radius: 0px !important;
+    border-end-start-radius: 0px !important;
+  }
+  :global .ant-table-selection-column {
+    background-color: transparent !important;
+    border-bottom: 1px solid $border-color !important;
+  }
+
+  :global .ant-pagination-options {
+    display: flex !important;
+    // padding-bottom: 8px !important;
+  }
+  :global .ant-pagination {
+    margin-bottom: 20px !important;
+  }
+}
+
+.alert {
+  @extend .min_width;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.header_Table {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #888e95;
+}
+
+.wrapperLinkActions {
+  display: flex;
+  color: $green-60;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.columnTable {
+  height: 20px;
+  line-height: 20px;
+  padding: 12px !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid #dbdde0 !important;
+}
+
+.rowEnabled {
+  color: #303336;
+}
+.rowDisabled {
+  color: #9fa4a9;
+}
+
+.iconAttachment {
+  background-image: url(/assets/icons/attachment.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  display: flex;
+  cursor: pointer;
+  min-width: 5rem;
+  height: 2rem;
+}

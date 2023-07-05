@@ -1,0 +1,20 @@
+.cannot_edited {
+  padding: 0;
+  line-height: 16px;
+}
+
+.info_icon {
+  width: 20px;
+  font-size: 12px;
+  text-indent: -9999px;
+  display: inline-block;
+  background: url($icon-info);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.info_text {
+  font-size: 12px;
+  display: inline-block;
+  color: $neutral-color;
+}

@@ -1,0 +1,17 @@
+.expandedRowWrapper {
+  :global .ant-row {
+    min-height: 28px !important;
+    line-height: normal !important;
+  }
+}
+
+.expandedRowContent {
+  padding: 0rem 3rem 1rem 3rem;
+  display: block;
+  width: 100%;
+}
+
+.expandedRowContentSection {
+  width: auto;
+  display: block;
+}

@@ -1,0 +1,74 @@
+@import "@/styles/mediaQueries";
+
+.suppliers {
+  margin: 50px 48px;
+  overflow-x: hidden;
+
+  &__buyer {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 !important;
+    letter-spacing: -0.02em;
+    color: #6b7279 !important;
+    line-height: 28px !important;
+  }
+
+  &__title {
+    margin: 0 0 24px !important;
+    font-size: 32px !important;
+    line-height: 48px;
+  }
+
+  @include tablet() {
+    margin: 50px 16px;
+  }
+
+  @include mobile() {
+    margin: 50px 16px;
+  }
+}
+
+.buttons_and_search {
+  width: 100%;
+  margin-bottom: 24px;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @include mobile() {
+    flex-direction: column-reverse;
+  }
+}
+
+.search {
+  @include tablet() {
+    width: 35%;
+    padding-bottom: 0;
+  }
+
+  @include mobile() {
+    width: 100%;
+    margin-bottom: 0px;
+
+    & input {
+      width: 100% !important;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+
+  &__add_icon {
+    top: 3px;
+    margin-right: 15px;
+    position: relative;
+  }
+  @include mobile() {
+    width: 100%;
+    margin-bottom: 10px;
+    & button {
+      width: 100% !important;
+    }
+  }
+}

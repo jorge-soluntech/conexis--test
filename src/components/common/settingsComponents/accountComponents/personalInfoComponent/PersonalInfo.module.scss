@@ -1,0 +1,40 @@
+@import '@/styles/mediaQueries';
+
+.form {
+  position: relative;
+  font-size: 16px;
+  margin: 40px;
+  border-radius: 8px;
+
+  @include mobile() {
+    margin: 20px;
+  }
+
+  :global .ant-form-item-label {
+    padding-bottom: 0px;
+  }
+}
+
+.smallInputs {
+  padding-right: 15px !important;
+  @include smallTabletMaxWidth() {
+    padding-right: 0px !important;
+  }
+}
+
+.label {
+  padding-bottom: 0;
+}
+
+.label div {
+  display: block;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.submit {
+  margin-top: 20px;
+}

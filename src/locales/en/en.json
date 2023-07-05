@@ -1,0 +1,686 @@
+{
+  "businessUnits": {
+    "title": "Business Units",
+    "titleTable": "Manage Business Units",
+    "buttonAddNew": "Add Business Unit",
+    "table": {
+      "id": "ID",
+      "number": "Business Unit #",
+      "name": "Business Unit name",
+      "buOwner": "BU Owner",
+      "status": "Status",
+      "actions": "Actions",
+      "errors": {
+        "status": "Business units cannot be deactivated if there’s an active contract connected to them."
+      }
+    },
+    "edit": {
+      "success": "Your business unit has been \n successfully update.",
+      "id": "ID",
+      "title": "Edit Business Unit"
+    },
+    "create": {
+      "titleForm": "Add new Business Unit",
+      "sucessfullCreation": "Your business unit has been \n successfully submitted.",
+      "businessUnitOwner": "Business Unit Owner",
+      "businessUnitInformation": "Business Unit Information",
+      "errors": {
+        "number": "The Business Unit # field is mandatory. Please make sure to fill it out before submitting the form.",
+        "phone": "Please enter a valid phone number.",
+        "email": "Please enter a valid email address."
+      },
+      "inputs": {
+        "name": "Business Unit name",
+        "namePlaceholder": "Enter Business Unit name here",
+        "number": "Business Unit #",
+        "numberPlaceholder": "Enter Business Unit # here",
+        "email": "Business Unit Email",
+        "phone": "Phone number",
+        "phonePlaceholder": "Enter phone number here",
+        "address": "Address",
+        "addressPlaceholder": "Enter address here",
+        "firstName": "First name",
+        "firstNamePlaceholder": "Enter first name here",
+        "lastName": "Last name",
+        "lastNamePlaceholder": "Enter last name here",
+        "primaryEmail": "Email (primary work or primary home)",
+        "primaryEmailPlaceholder": "example@email.com"
+      }
+    },
+    "goBackHome": "Go back to business units"
+  },
+  "buyers": {
+    "edit": {
+      "title": "Edit buyer"
+    },
+    "create": {
+      "title": "Add new buyer"
+    },
+    "firstStep": {
+      "SelfServe": "Self serve?",
+      "SelfServePlaceholder": "No",
+      "wontBeAbleEdit": "You won’t be able to edit this field later on."
+    },
+    "thirdStep": {
+      "accessToApplicantTracker": "Access to applicant tracking module?",
+      "requireContractApproval": "Contracts require final approval?",
+      "contractApproverId": "Default approver for contracts",
+      "contractApproverIdPlaceholder": "Select approver here",
+      "contractApproverIdError": "The default approver for contracts field is mandatory. Please make sure to fill it out before submitting the form."
+    }
+  },
+  "costCenters": {
+    "table": {
+      "number": "Cost center number",
+      "name": "Cost center name",
+      "status": "Status"
+    },
+    "create": {}
+  },
+  "glCodes": {
+    "create": {
+      "buttonBack": "Go back to GL codes",
+      "defaultErrorMessage": "This field is required"
+    }
+  },
+  "suppliers": {
+    "title": "Manage Suppliers",
+    "textGoTo": "Attachments",
+    "edit": {
+      "title": "Edit supplier"
+    },
+    "create": {
+      "title": "Add new supplier"
+    },
+    "clearFields": "Clear fields",
+    "stepOne": {
+      "title": "Supplier information",
+      "SupplierCompanyName": "Supplier company name",
+      "SupplierCompanyNamePlaceholder": "Enter company name here",
+      "SupplierCompanyNameError": "The supplier company name field is mandatory. Please make sure to fill it out before submitting the form.",
+      "supplierCompanyNameAlreadyExistsError": "This supplier already exists. Please use a different name.",
+      "legalNameForInvoicing": "Legal name for invoicing",
+      "legalNameForInvoicingPlaceholder": "Enter legal name here",
+      "legalNameForInvoicingError": "The legal name for invoicing field is mandatory. Please make sure to fill it out before submitting the form.",
+      "supplierContactName": "Supplier contact name",
+      "supplierContactNamePlaceholder": "Enter supplier contact name here",
+      "supplierCode": "Supplier code",
+      "supplierCodePlaceholder": "Enter supplier code here",
+      "supplierContactEmail": "Supplier contact email",
+      "supplierContactEmailPlaceholder": "Enter supplier contact email here",
+      "supplierContactEmailError": "Supplier contact email should be a valid email address.",
+      "supplierMailingAddress": "Supplier mailing address",
+      "supplierMailingAddressPlaceholder": "Enter supplier mailing address here",
+      "supplierContactPhone": "Supplier contact phone",
+      "supplierContactPhonePlaceholder": "Enter supplier contact phone here",
+      "supplierContactPhoneError": "Supplier contact phone should be a valid phone number.",
+      "contractExpirationDate": "Contract expiration date",
+      "contractExpirationDatePlaceholder": "Enter contract expiration date here",
+      "country": "Country",
+      "countryPlaceholder": "Enter country here",
+      "state": "State",
+      "statePlaceholder": "Enter state here",
+      "city": "City",
+      "cityPlaceholder": "Enter city here",
+      "zipCode": "Zip code",
+      "zipCodePlaceholder": "Enter zip code here",
+      "taxIdNumber": "Tax ID number",
+      "taxIdNumberPlaceholder": "Enter tax ID number here",
+      "geographicCoverage": "Geographic coverage",
+      "geographicCoveragePlaceholder": "Select geographic coverage here",
+      "workCategoriesCovered": "Work categories covered",
+      "workCategoriesCoveredPlaceholder": "Select work categories here",
+      "workCategoriesCoveredError": "The work categories covered field is mandatory. Please make sure to fill it out before submitting the form.",
+      "dunBradstreetNumber": "Dun & bradstreet number",
+      "dunBradstreetNumberPlaceholder": "Enter dun & bradstreet number here",
+      "supplierStatus": "Supplier status",
+      "supplierStatusPlaceholder": "Select supplier status here",
+      "nonResidentSupplier": "Non resident supplier",
+      "nonResidentSupplierPlaceholder": "Select non resident supplier here",
+      "diversityCertifications": "Diversity certifications",
+      "diversityCertificationsPlaceholder": "Select diversity certifications here",
+      "diversityCertificationsInfo": "This individual will receive payment notifications from the system when payments are applied to open invoices.",
+      "comments": "Comments",
+      "commentsPlaceholder": "Write any comments here",
+      "continueButton": "Continue"
+    },
+    "stepTwo": {
+      "title": "Additional supplier contacts",
+      "supplierContactName2": "Supplier contact name 2",
+      "supplierContactName3": "Supplier contact name 3",
+      "supplierContactNamePlaceholder": "Enter supplier contact name here",
+      "supplierCompanyNameAlreadyExistsError": "This supplier already exists. Please use a different name.",
+      "supplierContactEmail2": "Supplier contact email 2",
+      "supplierContactEmail2Error": "Supplier contact email 2 should be a valid email address.",
+      "supplierContactEmail3": "Supplier contact email 3",
+      "supplierContactEmail3Error": "Supplier contact email 3 should be a valid email address.",
+      "supplierContactEmailPlaceholder": "Enter supplier contact email here",
+      "AccountsReceivableContactLabel": "Accounts receivable contact name",
+      "AccountsReceivableContactPlaceHolder": "Enter accounts receivable contact name here",
+      "AccountsReceivableContactEmailLabel": "Accounts receivable contact email",
+      "AccountsReceivableContactEmailPlaceHolder": "Enter accounts receivable contact email here",
+      "AccountsReceivableContactEmailError": "Accounts receivable contact email should be a valid email address.",
+      "continueButton": "Continue",
+      "backButton": "Back"
+    },
+    "stepThree": {
+      "title": "Buyer information",
+      "continueButton": "Continue",
+      "backButton": "Back",
+      "AssignedBuyersLabel": "Assigned buyers",
+      "AssignedBuyersPlaceHolder": "Select buyers here",
+      "AssignedBuyersError": "Assigned buyers is mandatory"
+    },
+    "stepFour": {
+      "title": "Attachments ",
+      "continueButton": "Continue",
+      "backButton": "Back",
+      "optional": "(optional)",
+      "AttachmentsLabel": "File",
+      "TypeOfDocumentRequired": "The type of document field is mandatory. Please make sure to fill it out before submitting the form.",
+      "nameRequired": "The name field is mandatory. Please make sure to fill it out before submitting the form.",
+      "buyerRequired": "The buyer field is mandatory. Please make sure to fill it out before submitting the form.",
+      "expiryDateRequired": "The expiry date field is mandatory for client agreements. Please make sure to fill it out before submitting the form."
+    },
+    "attachments": {}
+  },
+  "users": {
+    "data_roles": {
+      "buyer": "BUYER USER",
+      "msp": "MSP USER",
+      "supplier": "SUPPLIER USER",
+      "global": "GLOBAL USER"
+    },
+    "create": {},
+    "update": {}
+  },
+  "approvals": {},
+  "candidates": {
+    "title": "Candidates",
+    "placeholderSearch": "Search by name or email",
+    "buttonAdd": "Add candidate",
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "workerStatus": "Worker Status",
+      "actions": "Actions"
+    },
+    "modalEdit": {
+      "buttonCancel": "Cancel",
+      "buttonSave": "Save"
+    },
+    "create": {
+      "titleForm": "Add new candidate",
+      "titleButtonBack": "Candidates",
+      "labelName": "First name",
+      "labelLastName": "Last name",
+      "labelEmail": "Email",
+      "placeholderInputNames": "Enter first name here",
+      "placeholderEmail": "Enter email here",
+      "textNoteEmail": "Note: if no email is entered, the candidate won't have an active account and therefore won't be able to access Conexis.",
+      "titleButtonSubmit": "Submit",
+      "titleSuccess": "Successfully created",
+      "subtitleSuccess": "The candidate will receive an activation message if an email has been provided.",
+      "textButtonSuccess": "Go back to candidates",
+      "titleErrorSendEmail": "Candidate has been created but the email was not sent.",
+      "textErrorName": "The first name field is mandatory. Please make sure to fill out all mandatory fields before submitting the form.",
+      "textErrorLastName": "The last name field is mandatory. Please make sure to fill out all mandatory fields before submitting the form.",
+      "textErrorUsedEmail": "Email address is already being used by another user.",
+      "textErrorValidEmail": "Please enter a valid email address.",
+      "textErrorAlreadyInTalentPool": "This candidate has already been added to your company's talent pool.",
+      "titleSuccessAddedTalentPool": "This candidate has now been added to your talent pool.",
+      "titleSuccessSupport": "Candidate has been created but the email was not sent.",
+      "textContactSupport": "Please contact support at ",
+      "labelStatus": "Worker status",
+      "placeholderStatus": "Select worker status here",
+      "optionsWorkerStatus": [
+        "T4",
+        "W2/With Ben",
+        "1099",
+        "Incorporated",
+        "C2C",
+        "W2/Without Ben",
+        "H1B Visa Enabled"
+      ],
+      "textErrorWorkerStatus": "The worker status field is mandatory. Please make sure to fill out all mandatory fields before submitting the form.",
+      "titleModalWarning": "Worker Profile Created without an Email",
+      "textModalWarning": "Please note that you are creating this candidate profile without an email. This worker will be unable to access Conexis and submit their own timecards.",
+      "textModalConfirm": "If this is ok, please click Yes. If you wish to go back and add the worker's email, click No.",
+      "titleYesButton": "Yes",
+      "titleNoButton": "No"
+    }
+  },
+  "contracts": {},
+  "imports": {},
+  "invoices": {},
+  "myJobs": {
+    "title": "My Jobs",
+    "inputSearch": "Search by",
+    "DeleteTemplates": "Delete templates",
+    "DeleteTemplatesModal": "The templates have been successfully deleted.",
+    "DeleteJob": "The job has been successfully deleted.",
+    "OnHoldModalMessage": "The job has been successfully put on hold. Suppliers have been notified.",
+    "RepostModalMessage": "The job has been successfully posted. Suppliers have been notified.",
+    "table": {
+      "JobId": "Job ID",
+      "jobTitle": "Job title",
+      "positionType": "Position type",
+      "status": "Status",
+      "plannedStartDate": "Planned start date",
+      "plannedEndDate": "Planned end date",
+      "businessUnit": "Business unit",
+      "actions": "Actions"
+    },
+    "additionalInformation": {
+      "title": "Additional information",
+      "postedOn": "Posted on",
+      "numberOfPositions": "Number of positions",
+      "filledPositions": "Filled positions",
+      "submissionsCount": "Submission count",
+      "fulfillmentRate": "Fulfillment rate",
+      "submissions": "Submissions"
+    },
+    "dots": {
+      "delete": "Delete",
+      "fillJob": "Set to filled",
+      "cancelJob": "Cancel",
+      "putOnHold": "Put on hold",
+      "addSubmission": "Add submission",
+      "repost": "Repost",
+      "duplicateTemplate": "Duplicate as template"
+    },
+    "fillJob": {
+      "title": "Fill job",
+      "label": "Do you want to reject the unsuccessful submissions",
+      "reasonCancelation": "Please enter the reason for rejection",
+      "placeholder": "Enter reason for rejection",
+      "optionsRejectFailedSubmisions": {
+        "yes": "Yes",
+        "no": "No"
+      },
+      "titleSuccess": "The job was successfully filled."
+    },
+    "cancelJob": {
+      "title": "Cancel job",
+      "label": "Please enter the reason for cancelation",
+      "placeholder": "Write reason for cancelation here",
+      "titleSuccess": "The job was successfully canceled."
+    },
+    "duplicatelJob": {
+      "titleSuccess": "The job was successfully duplicated as a template."
+    }
+  },
+  "jobApprovals": {
+    "title": "Job Approvals",
+    "table": {
+      "id": "Job ID",
+      "jobTitle": "Job Title",
+      "positionType": "Position Type",
+      "plannedStartDate": "Planned Start Date",
+      "plannedEndDate": "Planned End Date",
+      "businessUnits": "Business units",
+      "actions": "Actions",
+      "accept": "Approve",
+      "reject": "Reject"
+    },
+    "expandable": {
+      "additionalInformation": "Additional Information",
+      "jobSummary": "Job Summary",
+      "workShifts": "Work shifts",
+      "numberOfPositions": "Number of Positions",
+      "skillCategory": "Skill Category",
+      "hiringManager": "Hiring Manager",
+      "hiringManagersEmail": "Hiring Manager’s Email",
+      "workAddress": "Work Address",
+      "province": "State/Province",
+      "country": "Country",
+      "postalCode": "Postal Code",
+      "salaryTargetLow": "Salary Target Low",
+      "salaryTargetHigh": "Salary Target High",
+      "createdOn": "Created On",
+      "glCode": "GL Code",
+      "costCenters": "Cost Centers",
+      "businessUnit": "Business Unit",
+      "comments": "Comments",
+      "supplierDistributionList": "Supplier Distribution List",
+      "yourResponsibilities": "Your Responsibilities",
+      "requirements": "Requirements",
+      "jobSummaryAttachment": "Job Summary Attachment",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "workDays": "Work Days"
+    }
+  },
+  "onboardingActivities": {
+    "titleForm": "Edit Standard Onboarding Activities",
+    "descriptionForm": "This set of onboarding activities will be added to every contract. At the contract level, you will be able to mark activities as in progress or not required. Also at the contract level there will be a field for adding files and to mark each onboarding activity as complete.",
+    "placeholderInputs": "Enter onboarding activity here",
+    "titleButtonSubmit": "Submit",
+    "titleSuccess": "The onboarding activities were successfully submitted.",
+    "textButtonSuccess": "Go back to onboarding activities"
+  },
+  "postNewJob": {
+    "title": "Post a job",
+    "formCreate": {
+      "titleInformation": "Job information",
+      "titleLocation": "Work location",
+      "titleAdditional": "Additional information",
+      "labelApprovers": "Approvers",
+      "placeholderApprovers": "Select approvers here",
+      "textErrorApprovers": "The approvers field is mandatory. Please make sure to fill it out before submitting the form.",
+      "labelJobTitle": "Job title",
+      "placeholderJobTitle": "Enter job title here",
+      "textErrorJobTitle": "The job title field is mandatory. Please make sure to fill it out before submitting the form.",
+      "labelSkill": "Skill category",
+      "placeholderSkill": "Select skill category here",
+      "labelNumberPositions": "Number of positions",
+      "placeholderNumberPositions": "Enter number of positions here",
+      "textErrorNumberPositions": "The number of positions field is mandatory. Please make sure to fill it out before submitting the form.",
+      "labelPositionType": "Position type",
+      "placeholderPositionType": "Select position type here",
+      "textErrorPositionType": "The position type field is mandatory. Please make sure to fill it out before submitting the form.",
+      "labelHiringManager": "Hiring manager",
+      "placeholderHiringManager": "Select hiring manager here",
+      "textErrorHiringManager": "The hiring manager field is mandatory. Please make sure to fill it out before submitting the form.",
+      "labelPlannedStartDate": "Planned start date",
+      "textErrorPlannedStartDate": "The planned start date field is mandatory. Please make sure to fill it out before submitting the form.",
+      "labelPlannedEndDate": "Planned end date",
+      "textErrorPlannedEndDate": "The planned end date field is mandatory. Please make sure to fill it out before submitting the form.",
+      "labelTargetRate": "Target rate",
+      "placeholderTargetRate": "Enter target rate here",
+      "textErrorTargetRate": "The target rate field is mandatory. Please make sure to fill it out before submitting the form.",
+      "placeholderWorkShifts": "Select work shift here",
+      "workShiftsSelects": [
+        { "label": "Work shift 1", "name": "work_shifts_ids_1" },
+        { "label": "Work shift 2", "name": "work_shifts_ids_2" },
+        { "label": "Work shift 3", "name": "work_shifts_ids_3" }
+      ],
+      "labelJobAttachments": "Job description attachment",
+      "labelJobSummary": "Job summary",
+      "labelComments": "Comments",
+      "placeholderComments": "Write any comments here",
+      "labelAddressLine1": "Address line 1",
+      "placeholderAddressLine1": "Enter address line 1 here",
+      "labelAddressLine2": "Address line 2",
+      "placeholderAddressLine2": "Enter address line 2 here",
+      "labelCountry": "Country",
+      "placeholderCountry": "Select country here",
+      "labelState": "State / Province",
+      "placeholderState": "Select state or province here",
+      "labelCity": "City",
+      "placeholderCity": "Enter city here",
+      "labelZip": "Zip / Postal code",
+      "placeholderZip": "Enter zip or postal code here",
+      "labelBUnits": "Business unit",
+      "placeholderBUnits": "Select business unit here",
+      "labelGLCode": "GL code",
+      "placeholderGLCode": "Select GL code here",
+      "labelCostCenters": "Cost centers",
+      "placeholderCostCenter": "Select cost centers here",
+      "labelSupplierList": "Supplier distribution list",
+      "placeholderSupplierList": "Select suppliers here",
+      "labelSalaryLow": "Salary low",
+      "placeholderSalaryLow": "Enter salary low here",
+      "textErrorSalaryLow": "The salary low field is mandatory. Please make sure to fill it out before submitting the form.",
+      "labelSalaryHigh": "Salary high",
+      "placeholderSalaryHigh": "Enter salary high here",
+      "textErrorSalaryHigh": "The salary high field is mandatory. Please make sure to fill it out before submitting the form.",
+      "titleCancel": "Cancel",
+      "titleSave": "Save",
+      "titleSend": "Send now",
+      "titleSuccessSaved": "Job has been successfully saved.",
+      "titleSuccessSavedAsTemplate": "Job has been successfully saved as a template.",
+      "titleSuccessSent": "Job has been successfully sent.",
+      "titleButtonGoJobs": "Go back to jobs"
+    },
+    "optionsSkillCategory": {
+      "it": "IT",
+      "lightIndustrial": "Light Industrial",
+      "administrative": "Administrative",
+      "professional": "Professional",
+      "engineering": "Engineering",
+      "healthcare": "Healthcare"
+    },
+    "optionsPositionType": {
+      "temporary": "Temporary",
+      "permanent": "Permanent"
+    },
+    "optionsMenuSave": {
+      "saveForLater": "Save for later",
+      "saveAsTemplate": "Save as template"
+    }
+  },
+  "reports": {},
+  "settings": {
+    "title": "My account",
+    "information": "Personal information",
+    "resetPassword": "Reset password",
+    "formReset": {
+      "password": "Current password",
+      "textErrorEmptyFields": "The fields are mandatory. Please make sure to fill out all mandatory fields before submitting the form.",
+      "passwordPlaceholder": "Enter current password here",
+      "newPassword": "New password",
+      "newPasswordPlaceholder": "Enter new password here",
+      "confirmPassword": "Confirm new password",
+      "confirmPasswordPlaceholder": "Confirm new password here",
+      "passwordRequirements": "Your password must contain at least 8 characters, 1 number, 1 special character, and 1 uppercase letter.",
+      "success": "The password has been successfully updated.",
+      "errors": {
+        "password": "The password doesn’t meet all the requirements.",
+        "incorrectPassword": "Current password is incorrect.",
+        "passwordMatch": "The passwords don’t match."
+      },
+      "alert1": "Your password must contain at least 8 characters, 1 number,",
+      "alert2": "1 special character, and 1 uppercase letter."
+    },
+    "formInfo": {
+      "email": "Email",
+      "emailPlaceholder": "Enter email here",
+      "FirstName": "First name",
+      "FirstNamePlaceholder": "Enter first name here",
+      "LastName": "Last name",
+      "LastNamePlaceholder": "Enter last name here",
+      "errors": {
+        "email": "Please enter a valid email address.",
+        "firstName": "The first name field is mandatory. Please make sure to fill out all mandatory fields before submitting the form.",
+        "lastName": "The last name field is mandatory. Please make sure to fill out all mandatory fields before submitting the form.",
+        "emailUnique": "Email address is already being used by another user.",
+        "emptyFields": "The fields are mandatory. Please make sure to fill out all mandatory fields before submitting the form."
+      },
+      "success": "Your personal information has been successfully updated."
+    }
+  },
+  "submissions": {
+    "titleTable": "My Submissions",
+    "buttonAddNew": "Add new submissions",
+    "filters": {
+      "declined": "Declined",
+      "approved": "Approved"
+    },
+    "table": {
+      "id": "Submission ID",
+      "status": "Status",
+      "jobId": "Job ID",
+      "jobTitle": "Job Title",
+      "skillCategory": "Skill category",
+      "candidate": "Candidate",
+      "resume": "Resume",
+      "actions": "Actions"
+    }
+  },
+  "time_and_expenses": {},
+  "tutorials": {},
+  "workShifts": {
+    "titleWorkShifts": "Work Shifts",
+    "addButton": "Add work shifts",
+    "errorDeactivated": "This work shift can’t be deactivated because active contracts are using it",
+    "table": {
+      "name": "Name",
+      "shiftStartTime": "Shift start time",
+      "shiftEndTime": "Shift end time",
+      "workDays": "Work days",
+      "status": "Status"
+    },
+    "edit": {},
+    "create": {
+      "titleForm": "Add work shift",
+      "labelName": "Work shift name",
+      "placeholderName": "Enter work shift name here",
+      "labelStartTime": "Shift start time",
+      "labelEndTime": "Shift end time",
+      "labelDays": "Work days",
+      "titleButtonBack": "Work shifts",
+      "titleButtonSubmit": "Submit",
+      "textErrorDate": "The work shift time fields are mandatory. Please make sure to fill it out before submitting the form.",
+      "textErrorName": "The work shift name field is mandatory. Please make sure to fill it out before submitting the form.",
+      "titleSuccess": "The work shift was successfully created.",
+      "textButtonSuccess": "Go back to work shifts",
+      "days": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ]
+    }
+  },
+  "not_found": {},
+  "dashboard": {
+    "jobsToApprove": "Jobs to approve"
+  },
+  "components": {
+    "uploadAttachment": {
+      "title": "Click or drag file to this area to upload",
+      "titleResponsive": "Click or drag file to this area"
+    },
+    "workWeekDefinition": {
+      "title": "Work week definition",
+      "ms": "Monday - Sunday",
+      "ss": "Sunday - Saturday"
+    },
+    "exportDropdown": {
+      "title": "Export all",
+      "exportCsv": "Export as .csv",
+      "exportTxt": "Export as .txt",
+      "exportJson": "Export as .JSON"
+    },
+    "formSuccessModal": {
+      "cancelButton": "Cancel",
+      "saveButton": "Save",
+      "successButton": "Ok"
+    }
+  },
+  "formsCommon": {
+    "success": "success",
+    "clearFields": "Clear fields",
+    "editFieldAlert": "You won’t be able to edit this field later on.",
+    "submit": "Submit",
+    "errors": {
+      "main_error": "There's been an error. Please try again later.",
+      "email": "Please enter a valid email address",
+      "required": "This field is required",
+      "textErrorEmptyFields": "The fields are mandatory. Please make sure to fill it out before submitting the form.",
+      "textErrorMandatoryEmptyFields": "The fields are mandatory. Please make sure to fill out all mandatory fields before submitting the form."
+    },
+    "emailSupport": "customerhelp@conexis.io"
+  },
+  "consts": {
+    "emptyLabel": "-",
+    "catchError": "There's been an error. Please try again later.",
+    "shortDayNames": {
+      "monday": "Mon",
+      "tuesday": "Tue",
+      "wednesday": "Wed",
+      "thursday": "Thu",
+      "friday": "Fri",
+      "saturday": "Sat",
+      "sunday": "Sun"
+    },
+    "workCategoriesCovered": {
+      "itGeneralist": "Information Technology - Generalist",
+      "itDigital": "IT - Digital",
+      "itDataScience": "IT - Data Science (AI/Machine Learning)",
+      "administrative": "Administrative",
+      "lightIndustrial": "Light Industrial",
+      "engineering": "Engineering",
+      "financial": "Financial",
+      "salesMarketing": "Sales/Marketing",
+      "scientific": "Scientific",
+      "other": "Other"
+    },
+    "supplierStatus": {
+      "supplierAdvised": "Supplier Advised & Reviewing Documents",
+      "negotiation": "Negotiation - Redlines Received from Supplier",
+      "contracting": "Contracting - Awaiting signed contract back",
+      "contractSigned": "Contract Signed - Awaiting Compliance Docs",
+      "signedActive": "Signed - Active",
+      "signedInactive": "Signed - Inactive",
+      "cancelled": "Cancelled",
+      "onHold": "On Hold"
+    },
+    "nonResidentSupplier": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "positionType": {
+      "temporary": "Temporary",
+      "permanent": "Permanent"
+    },
+    "jobStatus": {
+      "template": "Template",
+      "unposted": "Unposted",
+      "open": "Open",
+      "awaitingForApproval": "Awaiting Approval",
+      "filled": "Filled",
+      "canceled": "Canceled",
+      "onHold": "On Hold"
+    },
+    "selects": {
+      "booleanSelectOptions": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "filters": {
+      "blankObject": {
+        "text": "Blanks"
+      }
+    }
+  },
+  "navbar": {
+    "buttonPostJob": "Post a job",
+    "linkTutorials": "Tutorials"
+  },
+  "sidebar": {
+    "labelItems": {
+      "dashboard": "Dashboard",
+      "myJobs": "My Jobs",
+      "submissions": "Submissions",
+      "contracts": "Contracts",
+      "t&e": "T&E",
+      "invoices": "Invoices",
+      "reports": "Reports",
+      "suppliers": "Suppliers",
+      "buyers": "Buyers",
+      "candidates": "Candidates",
+      "approvals": "Approvals",
+      "users": "Users",
+      "onboardingActivities": "Onboarding Activities",
+      "workShifts": "Work Shifts",
+      "businessUnits": "Business Units",
+      "glCodes": "GL Codes",
+      "costCenters": "Cost Centers",
+      "imports": "Imports",
+      "tutorials": "Tutorials",
+      "settings": "Settings",
+      "logOut": "Log out",
+      "postJob": "Post a job"
+    },
+    "selectLoggedAs": {
+      "labelSelectBuyer": "Select a buyer",
+      "labelSelectSupplier": "Select a supplier"
+    }
+  }
+}

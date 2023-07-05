@@ -1,0 +1,16 @@
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  .logo_title {
+    color: #000000;
+    font-family: $logo-font, sans-serif !important;
+    line-height: 27px;
+    font-weight: 300;
+    font-size: 20.0763px;
+    letter-spacing: 0.05em;
+    line-height: 27px;
+    margin: 0;
+  }
+}

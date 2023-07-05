@@ -1,0 +1,64 @@
+.form_auth {
+  position: relative;
+  font-size: 16px;
+  margin-top: 0rem;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+
+  @media (max-width: $tablet-breakpoint) {
+    min-height: 100%;
+    margin-top: 0rem;
+    margin-left: -12rem;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0px 24px 67.21px 24px;
+    background-color: white;
+    width: 93%;
+    min-height: auto;
+    margin-top: 0;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-left: 0;
+    display: block;
+  }
+
+  & > div > h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: $h3-color;
+    min-width: max-content;
+    // margin-top: -10rem;
+
+    @media (max-width: $mobile-breakpoint) {
+      line-height: 32px;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .form_auth_forgot {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 0.75em;
+    line-height: 16px;
+    color: $link-color;
+    cursor: pointer;
+  }
+  
+  .support {
+    font-size: 1em;
+    line-height: 24px;
+    color: #303336;
+    width: 100%;
+    margin-top: 48px;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-top: 24px;
+      line-height: 16px;
+    }
+  }
+}

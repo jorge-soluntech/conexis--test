@@ -1,0 +1,24 @@
+@import '@/styles/mediaQueries';
+
+.row {
+  margin-bottom: 10px !important;
+  & .col_item {
+    & > label {
+      color: $paragraph-color !important;
+    }
+    @include mobile() {
+      max-width: calc(100px + 16px);
+      min-width: calc(100px + 16px);
+    }
+  }
+
+  & .label {
+    :global .ant-form-item-label {
+      padding-bottom: 4px;
+    }
+  }
+}
+
+.submit {
+  margin-top: 10px;
+}

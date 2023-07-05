@@ -1,0 +1,31 @@
+
+
+.form_container {
+  margin: 3rem !important;
+  @media (max-width: $tablet-breakpoint) {
+    margin: 1rem !important;
+  }
+}
+
+.text{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: 20px;
+  }
+}
+
+
+.alertSuccess{
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  display: block;
+  text-indent: -9999px;
+  width: 40px;
+  height: 40px;
+  background: url(/assets/icons/alert_success.svg);
+  background-size: 40px 40px;
+}

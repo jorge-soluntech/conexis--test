@@ -1,0 +1,140 @@
+import type { GetServerSideProps } from 'next';
+
+import { List } from '@/components/common/crudElemnts/index';
+import { TablePageLoaderQuery } from '@/components/common/loaders';
+import {
+{{#if expandable}}
+  expandedRowRender,
+{{/if}}
+  query,
+  useColumns,
+{{#if checkboxes}}
+  useSelectRow,
+{{/if}}
+} from '@/components/common/{{camelCase resource}}Components/{{camelCase resource}}/table-config';
+// import en from '@/locales/en/en.json';
+
+/*
+ * TODO:: * include this texts in the language dictionary *
+ */
+const texts = {
+  titleTable: '{{ resource }} table',
+  buttonAddNew: 'Add new {{ resource }}',
+};
+
+const Page = () => {
+  const columns = useColumns();
+  {{#if checkboxes}}
+  const { defaultRowSelectOptions } = useSelectRow();
+  {{/if}}
+
+  {{#if expandable}} {{#unless checkboxes}}
+  return (
+    <TablePageLoaderQuery
+      {...{ fetcher: query.fetcher, queryString: query.url }}
+    >
+      {({ data, error, mutate, isValidating, isLoading }) => {
+        return (
+          <List
+            {...{
+              data,
+              error,
+              mutate,
+              isValidating,
+              isLoading,
+              columns,
+              texts,
+              expandedRowRender,
+            }}
+          />
+        )
+      }}
+    </TablePageLoaderQuery>
+  );
+  {{/unless}}
+  {{/if}}
+  {{#if checkboxes}} {{#unless expandable}}
+  return (
+    <TablePageLoaderQuery
+      {...{ fetcher: query.fetcher, queryString: query.url }}
+    >
+      {({ data, error, mutate, isValidating, isLoading }) => {
+        return (
+          <List
+            {...{
+              data,
+              error,
+              mutate,
+              isValidating,
+              isLoading,
+              columns,
+              texts,
+              defaultRowSelectOptions,
+            }}
+          />
+        )
+      }}
+    </TablePageLoaderQuery>
+  );
+  {{/unless}}
+  {{/if}}
+  {{#if expandable}} {{#if checkboxes}}
+  return (
+    <TablePageLoaderQuery
+      {...{ fetcher: query.fetcher, queryString: query.url }}
+    >
+      {({ data, error, mutate, isValidating, isLoading }) => {
+        return (
+          <List
+            {...{
+              data,
+              error,
+              mutate,
+              isValidating,
+              isLoading,
+              columns,
+              texts,
+              defaultRowSelectOptions,
+              expandedRowRender
+            }}
+          />
+        )
+      }}
+    </TablePageLoaderQuery>
+  );
+  {{/if}} {{/if}}
+  {{#unless expandable}} {{#unless checkboxes}}
+  return (
+    <TablePageLoaderQuery
+      {...{ fetcher: query.fetcher, queryString: query.url }}
+    >
+      {({ data, error, mutate, isValidating, isLoading }) => {
+        return (
+          <List
+            {...{
+              data,
+              error,
+              mutate,
+              isValidating,
+              isLoading,
+              columns,
+              texts
+            }}
+          />
+        )
+      }}
+    </TablePageLoaderQuery>
+  );
+  {{/unless}} {{/unless}}
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  if (req.cookies.token) {
+    return {
+      props: {},
+    };
+  }
+  return { redirect: { destination: '/auth', permanent: false } };
+};
+
+export default Page;

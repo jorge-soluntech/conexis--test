@@ -1,0 +1,144 @@
+/* eslint-disable class-methods-use-this */
+// eslint-disable-next-line import/no-extraneous-dependencies
+import MockAdapter from 'axios-mock-adapter';
+
+import axiosInstance from '@/infrastructure/api/axiosClient';
+import ResourceService from '@/infrastructure/services/ResourceService';
+{{#if checkboxes}}import en from '@/locales/en/en.json';{{/if}}
+
+/* DELETE THIS BEFORE PROD */
+{{#if checkboxes}}
+const {
+  consts: { jobStatus },
+} = en;
+{{/if}}
+const getRandomInt = (max: number) => Math.floor(Math.random() * max);
+
+const allCapsAlpha = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+const allLowerAlpha = [...'abcdefghijklmnopqrstuvwxyz'];
+const allNumbers = [...'0123456789'];
+const allChars = [...allCapsAlpha, ...allNumbers, ...allLowerAlpha];
+// modified from https:// gist.github.com/6174/6062387
+const randomText = (words: number) =>
+  [...Array(words)]
+    .map((_j) => {
+      return (
+        [...Array(getRandomInt(8) + 2)]
+          // eslint-disable-next-line no-bitwise
+          .map((_i) => allChars[(Math.random() * allChars.length) | 0])
+          .join('')
+      );
+    })
+    .join(' ');
+
+export const randomDateBetween = (start: Date, end: Date): string =>
+  new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
+    .toISOString()
+    .slice(0, 10);
+
+const randomName = [
+  'Jane',
+  'Jhon',
+  'Will',
+  'Michael',
+  'Luis',
+  'Carlos',
+  'Kim',
+  'Kate',
+  'Jenny',
+  'Angie',
+];
+const randomLastName = [
+  'Smith',
+  'McDonalds',
+  'Jhonson',
+  'Jordan',
+  'Perez',
+  'Dos Santos',
+  'Perez',
+  'Torres',
+  'Olivera',
+  'Gray',
+];
+
+const startDate = randomDateBetween(
+  new Date(Date.now()),
+  new Date(Date.now() + 7)
+);
+const endDate = randomDateBetween(
+  new Date(startDate),
+  new Date(Date.now() + 7)
+);
+
+const myJobAdditionalDataFactory = (index: number) => ({
+  aditionalInfo: {
+    status: index % 5 === 0,
+    jobId: `${getRandomInt(5)}`,
+    jobTitle: randomText(2),
+    typeOfPosition: randomText(2),
+    numberOfPositions: getRandomInt(7),
+    plannedStartDate: startDate,
+    plannedEndDate: endDate,
+    businessUnit: randomText(1),
+    postedOn: randomDateBetween(new Date(Date.now()), new Date(Date.now() + 7)),
+    filledPositions: getRandomInt(7),
+    submissionsCount: getRandomInt(23),
+  },
+});
+
+const buyersAdditionalDataFactory = (index: number) => ({
+  aditionalInfo: {
+    legalNameInvoicing: randomText(2),
+    clientMailingAddress: randomText(2),
+    clientMailingAddress2: randomText(2),
+    workWeekDefinition: randomText(2),
+    currency: '$',
+  },
+  taxes: {
+    vatFederalTax: `${getRandomInt(7)}%`,
+    provincialTax: `${getRandomInt(3)}%`,
+    otherTax: `${getRandomInt(13)}%`,
+  },
+  approvals: {
+    jobsRequireApproval: index % 2 === 0 ? 'Yes' : 'No',
+    submissionsRequireApproval: index % 2 === 0 ? 'Yes' : 'No',
+    accesToApplicantTrackingModule: index % 2 === 0 ? 'Yes' : 'No',
+    contractRequiresApproval: index % 2 === 0 ? 'Yes' : 'No',
+    accountsPayableContactName: getRandomInt(3),
+    accountsPayableContactEmail: getRandomInt(3),
+  },
+  documents: {
+    clientAgreement: [],
+    others: [],
+  },
+});
+
+const generateFakeData = Array(100)
+  .fill(0)
+  .map((_, index: number) => ({
+    id: index,
+    key: `${index + 1}`,
+    firstName: randomName[Math.floor(Math.random() * randomName.length)],
+    lastName: randomName[Math.floor(Math.random() * randomLastName.length)],
+    number: Math.floor(Math.random() * 5000),
+    {{#unless checkboxes}}status: index % 5 === 0,{{/unless}}
+    {{#if checkboxes}}status: index % 5 === 0 ? jobStatus.template : jobStatus.open,{{/if}}
+    /** THIS IS AN EXAMPLE OF THE DATA USED IN THE MY JOBS TABLE see IMyJobsComponent */
+    details: {
+      ...myJobAdditionalDataFactory(index),
+      ...buyersAdditionalDataFactory(index),
+    },
+  }));
+
+const mock = new MockAdapter(axiosInstance, { delayResponse: 2000 });
+
+mock.onGet('/{{url}}/readAll').reply(200, {
+  data: generateFakeData,
+});
+
+mock.onPut('/{{url}}/3/isActive/toggle').reply(400);
+
+/* TILL HERE */
+
+const service = new ResourceService(axiosInstance, '{{url}}');
+export default service;

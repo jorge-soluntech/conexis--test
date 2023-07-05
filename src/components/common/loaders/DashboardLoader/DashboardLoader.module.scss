@@ -1,0 +1,140 @@
+.container_dashboard_loader {
+  width: 100%;
+  height: auto;
+  background: #edeef0;
+  position: relative;
+  padding: 32px 48px;
+  overflow: hidden;
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 32px 36px !important;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 32px 16px !important;
+    background: transparent;
+  }
+
+  .container_info {
+    position: relative;
+    display: flex;
+
+    &_title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      color: #6b7279;
+      margin: 0;
+
+      @media (max-width: $mobile-breakpoint) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &_name {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 48px;
+      letter-spacing: -0.02em;
+      color: #303336;
+      margin-top: -11px;
+      margin-bottom: 0;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 24px;
+      color: #6b7279;
+      padding: 0;
+      margin: 14px 0px 7px 0px;
+    }
+  }
+
+  .container_cards {
+    // background-color: aqua;
+    position: relative;
+    z-index: 1;
+    min-height: 94px;
+    align-items: center;
+
+    .col_item {
+      max-width: calc(207px + 16px);
+      min-width: calc(207px + 16px);
+
+      @media (max-width: $tablet-breakpoint) {
+        max-width: calc(156px + 16px);
+        min-width: calc(156px + 16px);
+      }
+
+      @media (max-width: $mobile-breakpoint) {
+        max-width: 100%;
+      }
+
+      @media (max-width: 376px) {
+        max-width: 100%;
+        min-width: 0px;
+      }
+    }
+  }
+
+  .container_dashboard_loader {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    width: 477px;
+    height: 399.87px;
+    z-index: 0;
+
+    @media (max-width: $tablet-breakpoint) {
+      right: -300px;
+      bottom: 0;
+      background-size: cover;
+    }
+  }
+}
+
+.container_metrics {
+  padding: 52px 48px;
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 32px 36px !important;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 32px 16px !important;
+    padding-top: 0 !important;
+  }
+
+  .metrics_title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: #303336;
+    margin: 0;
+    margin-bottom: 28px;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 48px;
+    }
+  }
+
+  &_card_top {
+    width: 100%;
+    height: 127px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 24px 24px;
+  }
+
+  .col {
+    max-width: 365px;
+
+    @media (max-width: $mobile-breakpoint) {
+      max-width: 100%;
+    }
+  }
+}

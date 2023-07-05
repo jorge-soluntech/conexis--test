@@ -1,0 +1,7 @@
+import resource from '@/infrastructure/services/{{camelCase resource}}Resource';
+
+const fetcher = async (_url: string) => {
+  return resource.getAll();
+};
+const query = { url: '/{{url}}/readAll', fetcher };
+export default query;

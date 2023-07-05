@@ -1,0 +1,20 @@
+@import '@/styles/mediaQueries';
+
+.form_subtitle_container {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+
+.form_small_title {
+  font-size: 16px;
+  color: $h3-color;
+}
+
+.form_clear_fields {
+  all: unset;
+  font-size: 12px;
+  cursor: pointer;
+  color: $link-color;
+}

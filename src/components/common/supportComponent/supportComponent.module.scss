@@ -1,0 +1,80 @@
+@import '@/styles/mediaQueries';
+
+.card {
+  position: relative;
+  font-size: 16px;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  margin-bottom: 16px;
+  display: grid;
+
+  @include tablet() {
+    min-height: 100%;
+    margin-top: 0rem;
+  }
+
+  @include mobile() {
+    background-color: white;
+    min-height: auto;
+    margin-top: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: 0;
+    display: block;
+  }
+
+  & > div > h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: $h3-color;
+    min-width: max-content;
+
+    @include mobile() {
+      line-height: 32px;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.grid_style {
+  width: 100% !important;
+  text-align: center !important;
+  align-content: center !important;
+  box-shadow: none !important;
+  padding: 10px !important;
+}
+
+.alert_success {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  text-indent: -9999px;
+  background: url($icon-error-support);
+  background-size: 48px 48px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: $h3-color;
+  margin-top: 8px;
+  margin-bottom: 0px;
+
+  @include tablet() {
+    font-size: 20px;
+  }
+}
+
+.paragraph {
+  font-size: 16px;
+  color: $paragraph-color;
+  margin-top: 12px;
+}

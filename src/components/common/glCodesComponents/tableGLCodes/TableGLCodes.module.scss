@@ -1,0 +1,30 @@
+.headerTable {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #888E95;
+}
+
+.columnTable {
+  height: 20px;
+  max-width: 200px;
+  width: max-content;
+  line-height: 20px;
+  padding: 12px !important;
+  color: #303336 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid #DBDDE0 !important;
+}
+
+.userStatus {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #303336;  
+}

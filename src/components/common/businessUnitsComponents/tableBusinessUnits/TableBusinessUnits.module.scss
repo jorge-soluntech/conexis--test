@@ -1,0 +1,71 @@
+@import '@/styles/mediaQueries';
+
+.grid {
+  width: 100% !important;
+  overflow-x: auto !important;
+  text-align: center !important;
+  box-shadow: none !important;
+  padding: 32px 48px !important;
+  box-sizing: border-box !important;
+
+  @include tablet() {
+    padding: 32px 30px !important;
+  }
+
+  @include mobile() {
+    padding: 20px 10px !important;
+  }
+}
+
+.businessTable {
+  min-width: 693px;
+
+  :global .ant-pagination-item-active,
+  :global .ant-pagination-item-active a,
+  :global .ant-pagination-item-active:hover,
+  :global .ant-pagination-item-active a:hover {
+    color: $green-60 !important;
+    border-color: $green-60 !important;
+  }
+
+  :global .ant-table-column-sorter-inner .active {
+    color: $green-60 !important;
+  }
+}
+
+.headerTable {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $h5-color;
+}
+
+.columnTable {
+  height: 20px;
+  max-width: 200px;
+  line-height: 20px;
+  padding: 12px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  background-color: $bg-color-body !important;
+  border-bottom: 1px solid $border-color !important;
+}
+
+.userStatus {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $h3-color;
+}
+
+.wrapperLinkActions {
+  display: flex;
+  color: $green-60;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}

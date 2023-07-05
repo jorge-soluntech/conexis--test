@@ -1,0 +1,75 @@
+.card {
+  position: relative;
+  font-size: 16px;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  margin-bottom: 0.1rem;
+  display: grid;
+
+  @media (max-width: $tablet-breakpoint) {
+    min-height: 100%;
+    margin-top: 0rem;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    background-color: white;
+    min-height: auto;
+    margin-top: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: 0;
+    display: block;
+  }
+
+  & > div > h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: $h3-color;
+    min-width: max-content;
+
+    @media (max-width: $mobile-breakpoint) {
+      line-height: 32px;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.alert_success {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-top: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  text-indent: -9999px;
+  background: url(/assets/icons/alert_success.svg);
+  background-size: 40px 40px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: 20px;
+  }
+}
+
+.sub_text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: -10px;
+  margin-bottom: 0;
+  color: $paragraph-color;
+}
+
+.button {
+  font-size: 16px;
+  margin-bottom: 50px;
+}

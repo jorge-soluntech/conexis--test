@@ -1,0 +1,44 @@
+.modal {
+  transition: left 0.3s ease;
+}
+
+.title_modal {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $h3-color;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 400;
+  color: $h5-color;
+  line-height: 16px;
+  margin-bottom: 4px;
+}
+
+.select {
+  width: 100%;
+}
+
+.wrapper_cancelation {
+  margin-top: 6px;
+}
+
+.wrapper_success {
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title_success {
+  font-size: 24px;
+  font-weight: 400;
+  color: $h3-color;
+  margin: 16px 0 12px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.32px;
+}

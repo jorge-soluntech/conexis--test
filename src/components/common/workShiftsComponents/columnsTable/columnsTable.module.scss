@@ -1,0 +1,30 @@
+.header_table {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $h5-color;
+}
+
+.column_table {
+  line-height: 20px;
+  padding: 12px !important;
+  color: $h3-color !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid $border-color !important;
+}
+
+.wrapper_switch {
+  height: 41px;
+  display: flex;
+  min-width: 104px;
+  align-items: center;
+}
+
+.user_status {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $h3-color;
+}

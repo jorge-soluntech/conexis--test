@@ -1,0 +1,185 @@
+{{#if checkboxes}}
+import type { TableProps } from 'antd';
+{{/if}}
+{{#if expandable}} {{#if checkboxes}}
+import { Table } from 'antd';
+{{/if}} {{/if}}
+import type { {{#if checkboxes}}Key,{{/if}} {{#if expandable}}ReactNode{{/if}} } from 'react';
+{{#if checkboxes}}
+import { useCallback, useEffect, useState } from 'react';
+{{/if}}
+import en from '@/locales/en/en.json';
+{{#if expandable}}
+import BuyersExpandableRowDetails from '../../buyersComponents/buyersExpandableRowDetails';
+import { ExpandedRowDetailsWrapper } from '../../tableComponent/expandedRowDetailsWrapper';
+{{/if}}
+import queryConfig from './query';
+
+export const query = queryConfig;
+
+const {
+  businessUnits: { table },
+  {{#if checkboxes}}consts: { jobStatus },{{/if}}
+} = en;
+
+const statusFilters = [
+  { text: 'Active', value: true },
+  { text: 'Inactive', value: false },
+];
+{{#unless checkboxes}}
+const useCustomHook = () => {
+  const optimisticUpdateStatus = (key: any) => console.log(key);
+  return { optimisticUpdateStatus };
+};
+{{/unless}}
+export const useColumns = () => {
+  {{#unless checkboxes}}const { optimisticUpdateStatus } = useCustomHook();{{/unless}}
+
+  return [
+    {{#if expandable}} {{#if checkboxes}}
+    Table.SELECTION_COLUMN,
+    Table.EXPAND_COLUMN,
+    {{/if}} {{/if}}
+    { title: table.id, dataIndex: 'id' },
+    { title: 'first Name', dataIndex: 'firstName' },
+    {
+      title: table.buOwner,
+      dataIndex: 'lastName',
+      custom: { filter: 'uniqueByValue' },
+    },
+    {
+      title: table.status,
+      dataIndex: 'status',
+      filters: statusFilters,
+      custom: {
+        sorter: 'boolean',
+        filter: 'boolean',
+        {{#unless checkboxes}}switch: { callback: optimisticUpdateStatus },{{/unless}}
+      },
+    },
+    {
+      title: table.actions,
+      custom: {
+        actionAcceptReject: {
+          buttonText: ['Accept', 'Reject'],
+          onClick: (event: MouseEvent) => {
+            event.preventDefault();
+            // const { id } = event.currentTarget;
+            // NOTE:: add your request or redux or logic here to handle data and onclick action
+          },
+        },
+        sorter: false,
+      },
+    },
+    /* THIS IS ANOTHER EXAMPLE OR ROW ACTION
+      COMMENT OUT THE ABOVE CUSTOM ACTION
+      AND UNCOMMENT THIS ONE TO SEE THE DIFFERENT.
+    */
+    // {
+    //   custom: {
+    //     actionEdit: {
+    //       // TODO:: check if this should be kebabCase or camelCase for page routes
+    //       url: '/home/addActionRowButtons/edit',
+    //     },
+    //     sorter: false,
+    //   },
+    // },
+  ];
+};
+
+{{#if expandable}}
+export const expandedRowRender = (
+  record: any,
+  _index: number,
+  _indent: number,
+  _expanded: boolean
+): ReactNode => {
+  /*
+    * THIS IS AN EXAMPLE IMPLEMENTATION *
+    IF YOU NEED DIFFERENT ROW DETAILS YOU WILL NEED TO WRITE THAT COMPONENT.
+    THE WRAPPER COMPONENT AND DETAIL SECTION COMPONENT ARE GENERIC.
+    AND SHOULD BE USED FOR NEARLY ALL IMPLEMENTATIONS UNLESS IT IS A VERY CUSTOM DESIGN.
+  */
+
+  /* ALTERNATE EXAMPLES
+
+    // My Jobs Details
+    <ExpandedRowDetailsWrapper>
+      <MyJobsExpandableRowDetails {...{ record }} />
+    </ExpandedRowDetailsWrapper>
+
+    // Suppliers Details
+    <ExpandedRowDetailsWrapper>
+      <ExpandedRowDetailsWrapper.DetailsContent>
+        <ExpandedRowDetailsWrapper.ContentSection>
+          <ExpandedRow {...{ record }} />
+        </ExpandedRowDetailsWrapper.ContentSection>
+      </ExpandedRowDetailsWrapper.DetailsContent>
+    </ExpandedRowDetailsWrapper>
+  */
+
+  return (
+    <ExpandedRowDetailsWrapper>
+      <ExpandedRowDetailsWrapper.DetailsContent>
+        <ExpandedRowDetailsWrapper.ContentSection>
+          <BuyersExpandableRowDetails {...{ record }} />
+        </ExpandedRowDetailsWrapper.ContentSection>
+      </ExpandedRowDetailsWrapper.DetailsContent>
+    </ExpandedRowDetailsWrapper>
+  );
+};
+{{/if}}
+
+{{#if checkboxes}}
+export type UseSelectRow = TableProps<any>;
+
+export const useSelectRow = (): {
+  defaultRowSelectOptions: UseSelectRow | undefined;
+} => {
+  const [defaultRowSelectOptions, setDefaultRowSelectOptions] = useState<
+    UseSelectRow | undefined
+  >();
+  const [selectedRowKeys, setSelectedRowKeys] = useState<Key[]>([]);
+
+  const onSelectedRow = useCallback(
+    (record: any) => {
+      const newSelectedRowKeys = [...selectedRowKeys];
+      if (newSelectedRowKeys.indexOf(record.key) >= 0) {
+        newSelectedRowKeys.splice(selectedRowKeys.indexOf(record.key), 1);
+      } else {
+        newSelectedRowKeys.push(record.key);
+      }
+      setSelectedRowKeys(newSelectedRowKeys);
+    },
+    [selectedRowKeys]
+  );
+
+  const onSelectedRowKeysChange = useCallback((selectedRowKeys: Key[]) => {
+    setSelectedRowKeys(selectedRowKeys);
+  }, []);
+
+  useEffect(
+    function addDefaultSelectableRowValues() {
+      setDefaultRowSelectOptions((prevState) => ({
+        ...prevState,
+        rowSelection: {
+          type: 'checkbox',
+          hideSelectAll: true,
+          selectedRowKeys,
+          onChange: onSelectedRowKeysChange,
+          getCheckboxProps: (record: any) => {
+            return {
+              disabled: record.status !== jobStatus.template,
+              name: record.id,
+            };
+          },
+          onSelect: (record: any) => onSelectedRow(record),
+        },
+      }));
+    },
+    [selectedRowKeys, onSelectedRow, onSelectedRowKeysChange]
+  );
+
+  return { defaultRowSelectOptions };
+};
+{{/if}}

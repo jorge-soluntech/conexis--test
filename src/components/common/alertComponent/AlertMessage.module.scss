@@ -1,0 +1,26 @@
+.alert {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  background: $alert-warning;
+
+  :global .ant-alert-message {
+    color: $error;
+    margin-left: 10px;
+  }
+}
+
+.success {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  background: $alert-success;
+  border-color: $green-30 !important;
+
+  :global .ant-alert-message {
+    color: $success;
+    margin-left: 10px;
+  }
+}

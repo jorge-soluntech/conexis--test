@@ -1,0 +1,16 @@
+.header_table {
+  font-size: 12px;
+  font-weight: 400;
+  color: $h5-color;
+  line-height: 16px;
+  font-style: normal;
+}
+
+.column_table {
+  height: 20px;
+  line-height: 16px;
+  padding: 12px !important;
+  color: $h3-color !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid $border-color !important;
+}

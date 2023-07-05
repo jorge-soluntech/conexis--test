@@ -1,0 +1,67 @@
+.oActivities {
+  margin: 50px 48px;
+  overflow-x: hidden;
+
+  &__buyer {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 !important;
+    letter-spacing: -0.2px;
+    color: #6b7279 !important;
+    line-height: 28px !important;
+
+    @media (max-width: $tablet-breakpoint) {
+      font-size: 16px !important;
+    }
+  }
+
+  &__title {
+    margin: 0 0 24px !important;
+    margin-bottom: 0 !important;
+    font-size: 32px !important;
+    line-height: 48px;
+    font-weight: 700 !important;
+  }
+
+  & > p {
+    margin-top: 8px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: #6b7279;
+    width: 70%;
+
+    @media (max-width: $tablet-breakpoint) {
+      width: 100%;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin: 50px 36px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin: 50px 16px;
+  }
+
+  .form_container {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 48px;
+    width: 100%;
+    margin-top: 32px;
+
+    @media (max-width: $tablet-breakpoint) {
+      padding: 32px;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 24px;
+    }
+  }
+}

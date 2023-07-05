@@ -1,0 +1,38 @@
+.col {
+  margin-bottom: 24px;
+}
+
+.expandedRowContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.expandedRowContentItem {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0 8px 0 0;
+  color: $expanded-row;
+}
+
+.expandedRowContentItemValue {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $h5-color;
+  word-wrap: break-word;
+}
+
+.divider {
+  margin: 0 0 24px;
+  background-color: $border-color;
+}
+
+.containerAttachment {
+  min-height: 16px;
+  margin-top: 16px;
+  display: inline-block;
+}

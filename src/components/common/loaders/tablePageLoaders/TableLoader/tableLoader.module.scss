@@ -1,0 +1,35 @@
+.min_width {
+  min-width: 693px;
+}
+
+.loaderTable {
+  @extend .min_width;
+
+  :global .anticon {
+    color: $secondary !important;
+  }
+
+  :global .anticon-star {
+    color: inherit !important;
+  }
+
+  :global .anticon-double-left,
+  :global .anticon-double-right,
+  :global .ant-table-column-sorter-inner .active {
+    color: $green-50 !important;
+  }
+  :global .ant-table-row-expand-icon-cell,
+  :global .ant-table-selection-column {
+    background-color: transparent !important;
+    border-bottom: 1px solid $border-color !important;
+    border-radius: 0 !important;
+  }
+  :global .ant-table-cell-row-hover {
+    border-start-start-radius: 0px !important;
+    border-end-start-radius: 0px !important;
+  }
+  :global .ant-table-selection-column {
+    background-color: transparent !important;
+    border-bottom: 1px solid $border-color !important;
+  }
+}

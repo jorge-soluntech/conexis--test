@@ -1,0 +1,73 @@
+@import '@/styles/mediaQueries';
+
+.work_shifts {
+  margin: 50px 52px;
+  overflow-x: hidden;
+
+  &__buyer {
+    line-height: 28px;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 !important;
+    font-size: 20px !important;
+    color: $paragraph-color !important;
+  }
+
+  &__title {
+    color: $h3-color;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.32px;
+    font-size: 32px !important;
+    margin: 0 0 24px !important;
+  }
+
+  :global .ant-table-row td:first-child {
+    max-width: 250px;
+  }
+
+  @include tablet() {
+    margin: 50px 36px;
+
+    :global .ant-table-row td:first-child {
+      max-width: 150px;
+    }
+  }
+
+  @include mobile() {
+    margin: 50px 16px;
+  }
+}
+
+.top_bar {
+  width: 100%;
+  margin-bottom: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+
+  & button:first-child {
+    margin-right: 20px;
+  }
+
+  &__add_icon {
+    top: 3px;
+    margin-right: 15px;
+    position: relative;
+  }
+
+  @include maxSmallTablet() {
+    width: 100%;
+    & button:first-child {
+      width: min-content;
+    }
+
+    & button:last-child {
+      width: 100%;
+    }
+  }
+}

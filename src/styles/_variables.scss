@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'Comfortaa';
+  src: local('Comfortaa'),
+    url('/assets/fonts/Comfortaa-Light.woff2') format('woff2'),
+    url('/assets/fonts/Comfortaa-Light.woff') format('woff'),
+    url('/assets/fonts/Comfortaa-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Fonts
+$logo-font: 'Comfortaa';
+
+// Size fonts
+$base: 16px;
+
+// breakpoints
+$mobile-width: 800px;
+$max-content-width: 1195px;
+
+// Green Scale
+$green-30: #b7eb8f;
+$green-40: #add052;
+$green-50: #96bc33;
+$green-60: #769428;
+$green-600: #0bad56;
+
+// Yellow Scale
+$yellow-600: #ef9606;
+
+// Red Scale
+$red-600: #c31d25;
+
+$blue-600: #2c4fa0;
+
+// Color primario
+$primary: $blue-600;
+// Color secundario
+$secondary: #aaaab9;
+// Color del exito
+$success: #0bad56;
+// Color advertencia
+$warnings: $yellow-600;
+// Color de error
+$error: $red-600;
+
+// Components Color
+// navbar
+$navbar-color: #ffffff;
+$navbar-height: 80px;
+
+//background colors
+$bg-color-body: #ffffff;
+$bg-color-intro: #edeef0;
+$bg-expanded: #f5f5f6;
+$bg-select: #f9fcf3;
+
+//Font colors
+$paragraph-color: #6b7279;
+$subtitle-color: #6b7279;
+$h3-color: #303336;
+$h5-color: #888e95;
+$label-color: #54595f;
+$white-color: #ffffff;
+$link-color: #dd7812;
+$neutral-color: #9fa4a9;
+$input-color: #d9d9d9;
+
+//box shadow colors
+$box-shadow-color: rgba(0, 14, 51, 0.02);
+
+//switch
+$switch_active_color: $green-50;
+$switch_inactive_color: #bfbfbf;
+
+//Buttons colors
+$button-bg-color: $green-50;
+
+$move-to-right: moveToRight;
+
+// Breakpoint
+$mobile-breakpoint: 576px;
+$tablet-breakpoint: 992px;
+$small-tablet-breakpoint: 767px;
+
+// z-index
+$zindex-sidebar-hovered: 1000;
+$zindex-navbar: 1010;
+$zindex-sidebar-activated: 1020;
+
+// borders and dividers
+$border-color: #dbdde0;
+$border-color-hover: #dbdddf;
+$border-attachment: #c1c6cd;
+
+// multisteps form
+$multi-steps-icon: #e6f1cb;
+$multi-steps-icon-border: #c1c6cd;
+
+// alerts backgrounds
+$alert-success: #e9fbeb;
+$alert-warning: #ffe5e5;
+
+//expandable
+$expanded-row: #3f4246;
+
+//icons
+$icon-error-support: '/assets/icons/alert_error_support.svg';
+$icon-info: '/assets/icons/info.svg';
+$icon-suppliers: '/assets/icons/supplier.svg';
+$icon-buyers: '/assets/icons/buyer.svg';
+$icon-attachment: '/assets/icons/attachment.svg';

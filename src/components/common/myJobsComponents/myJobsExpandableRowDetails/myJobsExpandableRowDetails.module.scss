@@ -1,0 +1,34 @@
+.expandedRowContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.expandedRowContentItem {
+  font-size: 12px;
+  margin: 0 0 8px 0;
+  display: inline-flex;
+  color: $expanded-row;
+  font-weight: 600 !important;
+  -webkit-text-size-adjust: none;
+}
+
+@mixin itemValue($color) {
+  color: $color;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-flex;
+  word-wrap: break-word;
+}
+
+.expandedRowContentItemValue {
+  @include itemValue($h5-color);
+}
+
+.expandedRowContentViewMore {
+  @include itemValue($green-60);
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
